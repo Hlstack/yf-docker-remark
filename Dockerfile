@@ -5,11 +5,11 @@ FROM python:2.7-slim
 WORKDIR /app
 
 # 将当前目录内容复制到位于 /app 中的容器中
-# ADD . /app
+ADD ./requirements.txt /app
 # VOLUME /data 
 
 # 安装 requirements.txt 中指定的任何所需软件包
-# RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 # 使端口 80 可供此容器外的环境使用
 EXPOSE 80
@@ -18,5 +18,5 @@ EXPOSE 80
 ENV NAME World
 
 # 在容器启动时运行 app.py
-CMD ["pip", "install", "-r", "requirements.txt"]
+# CMD ["pip", "install", "-r", "requirements.txt"]
 CMD ["python", "app.py"]

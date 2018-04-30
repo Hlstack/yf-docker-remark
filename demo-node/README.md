@@ -14,3 +14,6 @@
   ```bash
   $ docker logs node1
   ```
+
+- rm All containers
+`$ docker rm $(docker stop $(docker ps -aq))`

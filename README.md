@@ -23,7 +23,18 @@
 
 #### Docker Commands
 
-- docker exec -it demo1 /bin/bash
+- 通过Dockerfile创建一个镜像
+
+  `$ docker build --tag node1 .`
+- 执行容器的终端
+
+  `$ docker exec -it demo1 /bin/bash`
+- 查看容器的控制台日志
+
+  `$ docker logs node1`
+- 运行一个容器，并且链接本地的其他容器
+
+  `$ docker run -d -p 9994:9994 --rm --link local-mysql:db --name node1 node1`
 
 
 #### Example

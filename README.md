@@ -19,7 +19,11 @@
   - Open `http://localhost:88`
   - root/root
 
+#### Docker Compose
 
+Questions:
+- Network
+- Links
 
 #### Docker Commands
 
